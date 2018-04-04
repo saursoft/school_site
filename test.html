@@ -1,0 +1,45 @@
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script> 
+<title></title>
+
+</head>
+<body>
+  
+<button onclick="throw_message('Файл не выбран !!!','w3-red')">Кнопка 1</button>
+<button onclick="throw_message('Файл добавлен !!!','w3-green')">Кнопка 2</button>
+
+<!--
+        <form action="handler.php" method="post" id="my_form" enctype="multipart/form-data">
+          <p>
+            <label for="my_file">Файл:</label>
+              <input type="file" name="my_file" id="my_file">
+              <progress id="progressbar" value="0" max="100"></progress>
+          </p>
+          <input type="submit" id="submit" value="Отправить">
+        </form>
+-->
+
+<div id='error_box' class=' ' style='display: none;  position: fixed; width: 370px; right: 20px; top: 20px; -webkit-box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3); box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3); -webkit-border-radius: 5px; border-radius: 5px; text-align: center;'>
+
+<p id='error_message' class="w3-text-white" style=' margin-top: 18px; font-weight: bold;  filter: dropshadow(color=#FFFFFF, offx=1, offy=1);'></p>
+</div>  
+</body>
+
+<script>
+    function throw_message(str,w3color) {
+        $('#error_message').html(str);
+        $('#error_box').attr('class','');
+        $('#error_box').addClass(w3color);
+        
+        $("#error_box").fadeIn(500).delay(500).fadeOut(50);
+    } 
+    
+  
+    
+    
+</script>
+
+
+
+</html>
